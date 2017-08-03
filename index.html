@@ -1,0 +1,789 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>I-PAINTER</title>
+	<meta charset="utf-8">
+	<meta name="Author" content="Maciej Włoch">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="Stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/rotator.js"></script>
+	<script type="text/javascript">
+		var topRotator = new rotator(715, "slides");
+		var rightRotator = new rotator(181, "right-rotator-slides");
+		var randomProducts = new rotator(578, "randomProducts");
+		var topChoose = new rotator(578, "topChoose");
+		var topRated = new rotator(578, "topRated");
+		$(window).load(function()
+		{
+			topRotator.start();
+			rightRotator.start();
+			randomProducts.start();
+			topChoose.start();
+			topRated.start();
+			$("#slides-pos").css("margin-left", "-" + $("#slides-pos").outerWidth()/2 + "px");
+			$("#content .rotator .picture").each(function() { $(this).css({ "top" : "50%", "left" : "50%", "margin-top" : "-" + ($(this).height()/2-10) + "px", "margin-left" : "-" + ($(this).width()/2) + "px" }); });
+			$("#right-rotator .picture img").each(function() { $(this).css({ "top" : "50%", "left" : "50%", "margin-top" : "-" + ($(this).height()/2) + "px", "margin-left" : "-" + ($(this).width()/2) + "px" }); });
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<div id="header">
+				<img id="paint" src="images/top-1.png" alt="">
+				<nav>
+					<ul id="header-menu-2nd">
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="#">TERMS &amp; CONDITIONS</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+					<div class="clr"></div>
+				</nav>
+				<div id="shadow-line"></div>
+				<!--
+				<div id="service">
+					<img class="nav" src="images/service-t.png" alt="Service">
+					<img src="images/service.jpg" alt="Service">
+				</div>
+				<div id="shop">
+					<img class="nav" src="images/shop-t.png" alt="Shop">
+					<img src="images/shop.jpg" alt="Shop">
+				</div>
+				-->
+				<img src="images/top-temp.jpg" style="display: block" alt="">
+				<div id="header-panel">
+					<a href="index.html" title="I-Painter"><img id="logo" src="images/logo.png" alt="I-Painter"></a>
+					<form action="#" method="post">
+					<div id="profile">
+						<input type="text" name="nick" placeholder="Username" required>
+						<input type="password" name="pass" placeholder="Password" required>
+						<input type="submit" value="GO">
+					</div>
+					</form>
+				</div>
+				<nav>
+					<ul id="header-menu">
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="navigation">
+				<ul>
+					<li><a href="#" title="I-Painter"><img src="images/home.png" alt="I-Painter"></a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">Product</a></li>
+				</ul>
+				<form action="#" method="post">
+				<div id="search">
+					<input type="text" name="fraza" placeholder="Search" required>
+					<input type="image" src="images/search.png" alt="GO">
+				</div>
+				</form>
+			</div>
+			<div id="rotator">
+				<img src="images/new.png" id="rotator-new" alt="NEW">
+				<div id="slides">
+					<a href="#"><img src="images/slide-1.jpg" alt=""></a><a href="#"><img src="images/slide-1.jpg" alt=""></a><a href="#"><img src="images/slide-1.jpg" alt=""></a><a href="#"><img src="images/slide-1.jpg" alt=""></a><a href="#"><img src="images/slide-1.jpg" alt=""></a>
+				</div>
+				<div id="slides-pos">
+					<a href="javascript:topRotator.getSlide(1)" class="active"></a>
+					<a href="javascript:topRotator.getSlide(2)"></a>
+					<a href="javascript:topRotator.getSlide(3)"></a>
+					<a href="javascript:topRotator.getSlide(4)"></a>
+					<a href="javascript:topRotator.getSlide(5)"></a>
+				</div>
+			</div>
+		</header>
+		<div id="main">
+			<section>
+				<div id="left">
+					<div id="categories">
+						<div class="title"><span>Categories</span></div>
+						<nav>
+							<ul>
+								<li>
+									<a href="#">Dulux</a>
+									<ul>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Dulux</a>
+									<ul>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Dulux</a>
+									<ul>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Dulux</a>
+									<ul>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+										<li><a href="#">Dulux</a></li>
+									</ul>
+								</li>
+								<li><br><br></li>
+							</ul>
+						</nav>
+					</div>
+					<div id="brands" class="block blockShadow">
+						<div class="title">Brands</div>
+						<div class="content">
+							<a href="#"><img src="images/tmp-4.jpg" alt=""></a>
+							<a href="#"><img src="images/tmp-5.jpg" alt=""></a>
+							<a href="#"><img src="images/tmp-6.jpg" alt=""></a>
+							<a href="#"><img src="images/tmp-4.jpg" alt=""></a>
+							<a href="#"><img src="images/tmp-5.jpg" alt=""></a>
+							<a href="#"><img src="images/tmp-6.jpg" alt=""></a>
+						</div>
+					</div>
+					<div id="distributors" class="block blockShadow">
+						<div class="title">Distributors</div>
+						<div class="content">
+							<img src="images/tmp-1.jpg" alt="">
+							<a href="#">[ MAP ]</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div id="content">
+					<div class="block rotator blockShadow">
+						<div class="title">Random Products</div>
+						<div id="randomProducts-pos" class="pos">
+							<a href="javascript:randomProducts.getSlide(1)" class="active"></a>
+							<a href="javascript:randomProducts.getSlide(2)"></a>
+							<a href="javascript:randomProducts.getSlide(3)"></a>
+							<a href="javascript:randomProducts.getSlide(4)"></a>
+						</div>
+						<div id="randomProducts" class="content">
+							<table>
+								<tr>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="block rotator blockShadow">
+						<div class="title">Top Choose</div>
+						<div id="topChoose-pos" class="pos">
+							<a href="javascript:topChoose.getSlide(1)" class="active"></a>
+							<a href="javascript:topChoose.getSlide(2)"></a>
+							<a href="javascript:topChoose.getSlide(3)"></a>
+							<a href="javascript:topChoose.getSlide(4)"></a>
+						</div>
+						<div id="topChoose" class="content">
+							<table>
+								<tr>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="block rotator blockShadow">
+						<div class="title">Top Rated</div>
+						<div id="topRated-pos" class="pos">
+							<a href="javascript:topRated.getSlide(1)" class="active"></a>
+							<a href="javascript:topRated.getSlide(2)"></a>
+							<a href="javascript:topRated.getSlide(3)"></a>
+							<a href="javascript:topRated.getSlide(4)"></a>
+						</div>
+						<div id="topRated" class="content">
+							<table>
+								<tr>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+									<td><div class="sep"></div></td>
+									<td>
+										<div class="slide">
+											<div class="header">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<div class="picture">
+													<a href="#"><img src="images/tmp-4.png" alt=""></a>
+													<span class="price">$15</span>
+												</div>
+											</div>
+											<div class="footer">
+												<div class="slide-title"><a href="#">Dulux-KOGEL-MOGEL 5 L</a></div>
+												<p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem</p>
+												<span class="price">Price: <span class="colordist">$15</span></span>
+												<a class="button" href="#">READ MORE</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$(".rotator .slide").hover(
+							function() { $(this).stop().animate({ scrollTop : "234px" }, "slow"); },
+							function() { $(this).stop().animate({ scrollTop : "0px" }, "slow"); }
+						);
+					</script>
+				</div>
+			</section>
+			<section>
+				<div id="right">
+					<div id="basket" class="block blockMargin blockShadow">
+						<div class="title"><img src="images/basket.png" alt="Basket">Basket</div>
+						<div class="content">
+							Products in basket: <b>18</b><br>
+							Discount: <b>$0</b><br>
+							<br>
+							<a class="button" href="#">GO</a>
+							Value: <span class="colordist">$128</span>
+						</div>
+					</div>
+					<div id="right-rotator" class="block">
+						<div id="right-rotator-slides" class="content">
+							<table>
+								<tr>
+									<td>
+										<div class="slide">
+											<div class="slide-header">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<a class="picture" href="#"><img src="images/tmp-4.png" alt=""></a>
+											</div>
+											<div class="slide-footer">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+												<span class="price">Price: <span class="colordist">$123</span></span>
+												<a class="button" href="#">MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="slide-header">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<a class="picture" href="#"><img src="images/tmp-4.png" alt=""></a>
+											</div>
+											<div class="slide-footer">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+												<span class="price">Price: <span class="colordist">$123</span></span>
+												<a class="button" href="#">MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="slide-header">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<a class="picture" href="#"><img src="images/tmp-4.png" alt=""></a>
+											</div>
+											<div class="slide-footer">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+												<span class="price">Price: <span class="colordist">$123</span></span>
+												<a class="button" href="#">MORE</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="slide">
+											<div class="slide-header">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<a class="picture" href="#"><img src="images/tmp-4.png" alt=""></a>
+											</div>
+											<div class="slide-footer">
+												<a class="name" href="#">Delux Kogel Mogel 5L</a>
+												<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+												<span class="price">Price: <span class="colordist">$123</span></span>
+												<a class="button" href="#">MORE</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<a class="prev" href="javascript:rightRotator.prevSlide()"><img src="images/rightSlider-prev.png" alt="Previous"></a>
+						<a class="next" href="javascript:rightRotator.nextSlide()"><img src="images/rightSlider-next.png" alt="Next"></a>
+					</div>
+					<script type="text/javascript">
+						$("#right-rotator .slide").hover(
+							function() { $(this).stop().animate({ scrollTop : "205px" }, "slow"); },
+							function() { $(this).stop().animate({ scrollTop : "0px" }, "slow"); }
+						);
+					</script>
+					<form action="#" method="post">
+					<div id="newsletter" class="block blockMargin blockShadow">
+						<div class="title">Newsletter</div>
+						<div class="content">
+							Zapisz się do newslettera aby otrzymywać informacje o nowych produktach i&nbsp;promocjach w sklepie.<br>
+							<br>
+							<input type="email" name="mail" placeholder="your@email.com" required> <input type="submit" value="ADD">
+						</div>
+					</div>
+					</form>
+					<div id="contact" class="block blockMargin blockShadow">
+						<div class="title">Contact</div>
+						<div class="content">
+							<strong>I-Painter.com.au</strong><br>
+							<br>
+							<b>Paul Werner</b><br>
+							<b>Seller Manager</b><br>
+							Mobile: <b>(+61) 123 123 123</b><br>
+							Skype: <a href="skype:paul?call"><b>P.Werner</b></a><br>
+							E-mail:<br>
+							<a href="mailto:contact@i-painter.com.au"><b>contact@i-painter.com.au</b></a><br>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div id="footer">
+				<div class="content">
+					<div id="address">
+						<b>Company Address:</b><br>
+						I-Painter<br>
+						12 Kings Cross<br>
+						Paramatha<br>
+						NSW, 2233 / Australia
+					</div>
+					<b>Contact Us:</b><br>
+					Phone: (+61) 123 123 123<br>
+					E-mail: <a href="maito:contact@i-painter.com.au">contact@i-painter.com.au</a>
+					<nav>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Site Map</a></li>
+							<li><a href="#">Company Map</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div id="copyright">Copyright 2012 <a href="http://www.i-painter.com.au" title="I-Painter">I-Painter.com.au</a>. All rights reserved. Created by <a href="http://www.webcrew.pl" title="Professional websites">WebCrew</a></div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
